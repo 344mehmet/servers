@@ -1,0 +1,9 @@
+# ... existing code ...
+
+class ExampleClass:
+    def __init__(self):
+        # ... existing code ...
+
+        self.example_property = "örnek değer"  # {{ added Turkish property }}
+
+        # ... rest of class ...

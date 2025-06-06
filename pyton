@@ -1,0 +1,58 @@
+def topla(x, y):
+  """Bu fonksiyon iki sayıyı toplar"""
+  return x + y
+
+def cikar(x, y):
+  """Bu fonksiyon iki sayıyı çıkarır"""
+  return x - y
+
+def carp(x, y):
+  """Bu fonksiyon iki sayıyı çarpar"""
+  return x * y
+
+def bol(x, y):
+  """Bu fonksiyon iki sayıyı böler"""
+  if y == 0:
+    return "Hata: Sıfıra bölme!"
+  else:
+    return x / y
+
+print("Yapmak istediğiniz işlemi seçin.")
+print("1. Toplama")
+print("2. Çıkarma")
+print("3. Çarpma")
+print("4. Bölme")
+
+while True:
+  # Kullanıcıdan giriş al
+  secim = input("Seçiminizi girin (1/2/3/4): ")
+
+  # Seçimin geçerli olup olmadığını kontrol et
+  if secim in ('1', '2', '3', '4'):
+    try:
+      sayi1 = float(input("Birinci sayıyı girin: "))
+      sayi2 = float(input("İkinci sayıyı girin: "))
+    except ValueError:
+      print("Geçersiz giriş. Lütfen sayı girin.")
+      continue
+
+    if secim == '1':
+      print(f"{sayi1} + {sayi2} = {topla(sayi1, sayi2)}")
+
+    elif secim == '2':
+      print(f"{sayi1} - {sayi2} = {cikar(sayi1, sayi2)}")
+
+    elif secim == '3':
+      print(f"{sayi1} * {sayi2} = {carp(sayi1, sayi2)}")
+
+    elif secim == '4':
+      sonuc = bol(sayi1, sayi2)
+      print(f"{sayi1} / {sayi2} = {sonuc}")
+
+    # Başka bir hesaplama yapmak isteyip istemediğini sor
+    baska_hesaplama = input("Başka bir hesaplama yapmak ister misiniz? (evet/hayır): ")
+    if baska_hesaplama.lower() != 'evet':
+      break
+  else:
+    print("Geçersiz Giriş")
+
