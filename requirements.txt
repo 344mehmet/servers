@@ -8,6 +8,6 @@ psycopg2-binary==2.9.9
 python-jose==3.3.0
 passlib==1.7.4
 pydantic==2.5.2
-python-multipart==0.0.6
+python-multipart==0.0.18
 okx==2.1.2
 next==15.2.4
